@@ -1,4 +1,4 @@
-# Exercise 0.4 - Fullstackopen
+# Exercise 0.5 - Fullstackopen
 ## Challenge
 Create a diagram depicting the situation where the user goes to the single-page app version 
 of the notes app at https://studies.cs.helsinki.fi/exampleapp/spa.
@@ -37,11 +37,12 @@ sequenceDiagram
     Server-->>Browser: JavaScript file
 
     Note right of Browser: Browser begins executing JavaScript file
+    Note right of Browser: window.omload fires and adds event listener to form submit
 
     Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     Server-->>Browser: data.json file<br/>[{content: "Wow", date: "..."}]
 
-    Note right of Browser: After response (onStateChange == 4),<br/>browser parses JSON and renders list on screen
+    Note right of Browser: After response (onStateChange == 4),<br/>browser parses JSON and renders list on screen(redraw notes)
 ```
 
 ```mermaid
