@@ -49,7 +49,7 @@ sequenceDiagram
     Note right of Browser: window.omload fires and adds event listener to form submit
 
     Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
-    Server-->>Browser: data.json file<br/>[{content: "Wow", date: "..."}]
+    Server-->>Browser: data.json file<br/>[{content: "Wow", date: "..."},...]
 
     Note right of Browser: After response (onStateChange == 4),<br/>browser parses JSON and renders list on screen(redraw notes)
 
